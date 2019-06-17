@@ -15,7 +15,7 @@ const circle = {
 
 circle.draw();
 */
-
+/*
 //Factory Function
 function crateCircle(radius){
     return {
@@ -44,7 +44,7 @@ const Circle1 = new Function('radius',`
 `)
 
 Circle.call({}, 1)
-
+Circle.apply({},[1,2,3])
 const circle2 = new Circle1(1);
 const another =  new Circle(1);
 another.draw();
@@ -59,3 +59,22 @@ new Number();  // 1, 2, 3, ...
 
 
 //Functions are Objects
+*/
+
+let x = {value: 10};
+let y = x;
+
+x.value = 20;
+
+console.log(x)
+console.log(y)
+
+let obj = {value: 10};
+
+function increase(obj){
+    obj.value++;
+}
+
+increase(obj);
+
+console.log(obj)
