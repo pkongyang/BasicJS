@@ -88,18 +88,25 @@ function Circle(radius){
 
     let defaultLocation = {x: 0, y: 0};
 
-    let computeOptimumLocation = function(factor){
-        // ...
+    this.getDefaultLocation = function(){
+        return defaultLocation;
     }
 
 
     this.draw = function() {
 
-        computeOptimumLocation(0.1);
+        //computeOptimumLocation(0.1);
         
 
         console.log('draw');
     }
+
+    Object.defineProperty(this, 'defaultLocation', {
+        get: function(){
+            return defaultLocation;
+        }
+        }
+    )
 }
 const circle = new Circle(10);
 circle.draw();
@@ -124,3 +131,4 @@ if ('radius' in circle)
     console.log('Circle has a radius')
 
 */
+
