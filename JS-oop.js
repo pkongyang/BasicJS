@@ -60,7 +60,7 @@ new Number();  // 1, 2, 3, ...
 
 //Functions are Objects
 */
-
+/*
 let x = {value: 10};
 let y = x;
 
@@ -78,3 +78,49 @@ function increase(obj){
 increase(obj);
 
 console.log(obj)
+*/
+
+// Add and removed properties
+
+function Circle(radius){
+
+    this.radius = radius;
+
+    let defaultLocation = {x: 0, y: 0};
+
+    let computeOptimumLocation = function(factor){
+        // ...
+    }
+
+
+    this.draw = function() {
+
+        computeOptimumLocation(0.1);
+        
+
+        console.log('draw');
+    }
+}
+const circle = new Circle(10);
+circle.draw();
+
+/*
+circle.location = {x: 1};
+
+const propertyName = 'location';
+circle[propertyName] =  {x: 1};
+delete circle.location;
+*/
+/*
+//Enumerating Properties
+for ( let key in circle ) {
+    if ( typeof circle[key] !== 'function')
+        console.log (key, circle[key]);
+}
+const keys = Object.keys(circle);
+console.log(keys);
+
+if ('radius' in circle)
+    console.log('Circle has a radius')
+
+*/
